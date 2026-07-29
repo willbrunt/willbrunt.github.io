@@ -4,6 +4,7 @@ var toggle = function(/** @type { Element } */ summary) {
 
       players = document.querySelectorAll("video");
       console.log("Found " + players.length + " videos!");
+      console.log(players);
       if (players.length != 0) {
           players.array.forEach(video => {
               if (video.paused) {
