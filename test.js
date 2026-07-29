@@ -2,7 +2,8 @@
 var toggle = function(/** @type { Element } */ summary) {
     const details = summary.parentElement;
 
-      players = document.querySelectorAll("video");
+      frame = details.querySelector("iframe");
+      players = frame.contentWindow.document.body.querySelectorAll("video");
       console.log("Found " + players.length + " videos!");
       console.log(players);
       if (players.length != 0) {
