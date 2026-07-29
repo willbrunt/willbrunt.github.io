@@ -2,7 +2,7 @@
 var toggle = function(/** @type { Element } */ summary) {
     const details = summary.parentElement;
 
-      players = details.querySelectorAll("video");
+      players = document.querySelectorAll("video");
       console.log("Found " + players.length + " videos!");
       if (players.length != 0) {
           players.array.forEach(video => {
