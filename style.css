@@ -1,0 +1,261 @@
+:root {
+    --sbwidth: 26%;
+    --navheight: 82.2px;
+
+    --backgroundcolor: #fbfffb;
+}
+
+body {
+    margin: 30px;
+    margin-top: 0;
+    background-color: var(--backgroundcolor);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+img {
+    user-select: none;
+}
+
+body-nav {
+    background-color: inherit;
+}
+
+nav.head {
+    display: block;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    width: 96%;
+    list-style-type: none;
+    padding: 0;
+    padding-top: 10px;
+    overflow: auto;
+    background-color: inherit;    
+    border-bottom: 2px solid #888;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+nav.head li {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0px 12.5px;
+    user-select: none;
+}
+
+nav.head li a {
+    display: inline-block;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    font-size: 16pt;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+nav.head li a:hover {
+    background-color: #ccc;
+}
+nav.head li a:active {
+    background-color: #ddd;
+}
+
+.sidebar {
+    margin-top: var(--navheight);
+    width: var(--sbwidth);
+    height: calc(100% - var(--navheight));
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9;
+}
+.sidebar-main {
+    height: 551.6px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-right: 2px solid #aaa;
+    border-radius: 8px;
+}
+
+.pfp_link {
+    position: relative;
+    display: block;
+    margin: auto;
+    align-self: center;
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1;
+    z-index: 3;
+}
+
+.pfp {
+    display: block;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: var(--backgroundcolor);
+}
+
+.name {
+    text-align: center;
+    font-size: x-large;
+}
+
+.sidebartexts {
+    margin-left: 6%;
+    margin-right: 6%;
+    overflow-wrap: anywhere;
+}
+
+.bio {
+    margin: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.ico {
+    height: 16px;
+    display: inline-block;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.info {
+    width: fit-content;
+    margin: auto;
+}
+
+.info ul {
+    padding: 0;
+    list-style-type: none;
+    display: -moz-inline-stack;
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+}
+.info ul li {
+    padding-bottom: 10px;
+}
+
+.infolink {
+    display: inline-block;
+}
+.infolink:link {
+    text-decoration: none;
+    color: #31b4e8;
+}
+.infolink:hover {
+    text-decoration: none;
+    color: rgb(103, 27, 146);
+}
+.infolink span:not(.nav-panel, .content-starter, .content-footer, .beginning, .end) {
+    display: inline-flex;
+    text-decoration: underline;
+}
+
+.content {
+    display: block;
+    box-sizing: border-box;
+    background-color: var(--backgroundcolor);
+    position: absolute;
+    width: calc(100% - var(--sbwidth) - 5%);
+    max-width: 1048.2297px;
+    /* width: 1048.2297px; */
+    height: fit-content;
+    top: 82.2px;
+    /* margin-left: 460.8px; */
+    margin-left: var(--sbwidth);
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 3%;
+    line-height: 40px;
+    overflow: hidden;
+}
+.content h1 {
+    font-size: 30pt;
+    margin-top: 10px;
+}
+
+
+.content a:link {
+    color: #31b4e8;
+}
+.content a:link:hover {
+    color: rgb(103, 27, 146);
+}
+
+.nav-panel, .content-starter, .content-footer, .beginning, .end {
+    display: none;
+    width: 0;
+    user-select: all;
+}
+
+.disclosure {
+    position: fixed;
+    top: 0;
+    user-select: auto;
+}
+
+#newegg {
+    position: absolute;
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    left: calc(50% - 400px / 2);
+    width: 400px;
+    height: fit-content;
+    min-height: 100px;
+    z-index: 9;
+    background-color: var(--backgroundcolor);
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: visible;
+}
+
+#newegg > p {
+    margin: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+#newegg > button {
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.confetti {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 100%;
+    z-index: 11;
+    
+    transition-property: all;
+    transition-duration: 5s;
+    transition-behavior: allow-discrete;
+    transition-timing-function: ease-out;
+}
+
+.confetti[fwd] {
+    rotate: 2700deg;
+}
+.confetti[bwd] {
+    rotate: -2700deg;
+}
+
+#publication-date:not([hidden]) {
+    position: absolute;
+    margin-top: 5px;
+    z-index: 15;
+}
+
