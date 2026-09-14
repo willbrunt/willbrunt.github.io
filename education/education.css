@@ -1,0 +1,120 @@
+.edu {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.edu li {
+    display: flex;
+    width: 825;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 2px dashed #888;
+    
+}
+.edu #last {
+    border-bottom: 2px dashed #888;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+.edu #first {
+    border-bottom: none;
+    padding-top: 3%;
+    padding-bottom: 0%;
+}
+.edu li .main{
+    display: flexbox;
+    text-align: left;
+    width: 600px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.edu h2 {
+    display: block;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.edu li .img {
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    width: 220px;
+    aspect-ratio: 1;
+    align-self: right;
+}
+
+.edu > li > .main a {
+    text-decoration: none;
+}
+.edu > li > .main a:hover {
+    text-decoration: underline;
+}
+
+#egg-img {
+    display: block;
+    overflow: visible;
+    margin-left: -312px;
+    height: 50%;
+    width: 60%;
+    user-select: none;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+#egg-img[hide] {
+    transform: translateX(-50px);
+}
+.lizal {
+    height: 100%;
+    rotate: -40deg;
+    cursor: pointer;
+
+    transition-property: rotate, margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+#egg-img:hover .lizal {
+    margin-left: 12px;
+    rotate: 20deg;
+}
+
+#frame {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 738px;
+    width: 1535px;
+    overflow: hidden;
+    z-index: -1;
+}
+#frame[run] {
+    pointer-events: none;
+    z-index: 200;
+}
+
+#egg {
+    position: absolute;
+    z-index: 200;
+
+    animation: slide 43s linear;
+    animation-delay: 5.5s;
+}
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(3940px);
+    }
+}
+.eggzal {
+    animation-play-state: running;
+    position: absolute;
+    height: 80px;
+}
+
+.pre {
+    width: 1px;
+}
