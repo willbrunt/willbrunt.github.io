@@ -1,0 +1,266 @@
+:root {
+    --speed: 1.5s;
+    --vz-fp-height: 195.6px;
+    --anneal-input-height: 202.5px;
+
+    --summ-height: 48.4px;
+}
+
+.program {
+    list-style: none;
+    margin-left: 0;
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.program ul {
+    padding-left: 0;
+}
+
+.program details {
+    border: 2px solid #999;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.program details #last{
+    margin-top: 0;
+}
+
+.program summary {
+    padding-left: 20px;
+    padding-bottom: 6px;
+    
+    font-size: 22px;
+    font-weight: bold;
+    color: #247899;
+    cursor: pointer;
+    user-select: none;
+    text-underline-offset: 6px;
+    border-radius: 5px;
+    border-bottom: 2px solid transparent;
+
+    transition-property: border;
+    transition-duration: var(--speed);
+    transition-behavior: allow-discrete;
+}
+.program details[open] summary {
+    color: rgb(103, 27, 146);
+
+    transition-timing-function: ease-out;
+    border-color: #999;
+    
+}
+.program details:not([open]) summary {
+    transition-timing-function: ease-in;
+    border-color: transparent;
+}
+.program details summary > span {
+    text-decoration: underline;
+}
+
+.program details > .details-body {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: fit-content;
+}
+.program details > .details-body + div {
+    margin: inherit;
+}
+.program details > .details-body > p {
+    margin: inherit;
+    line-break: strict;
+    line-height: 20px;
+    padding-bottom: 15px;
+}
+details > .details-body > p > u {
+    font-size: 20px;
+    line-height: 25px;
+}
+span.indent {
+    text-align: justify;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+details::details-content {
+    box-sizing: border-box;
+    overflow: hidden;
+
+    transition-property: all;
+    transition-duration: var(--speed);
+    transition-behavior: allow-discrete;
+    transition-timing-function: ease-in-out;
+}
+details:not([open])::details-content {
+    height: 0px;
+}
+details[open]::details-content {
+    height: fit-content;
+}
+
+#site[open]::details-content {
+    height: calc(609.017px - var(--summ-height));
+}
+#vz-spec[open]::details-content {
+    height: calc(1355.73px - var(--summ-height));
+}
+#esp[open]::details-content {
+    height: calc(1025.07px - var(--summ-height));
+}
+#heating[open]::details-content {
+    height: calc(1304.43px - var(--summ-height));
+}
+#litho[open]::details-content {
+    height: calc(985.443px - var(--summ-height));
+}
+#lens[open]::details-content {
+    height: calc(1074.97px - var(--summ-height));
+}
+#c-scan[open]::details-content {
+    height: calc(668.683px - var(--summ-height));
+}
+#pump[open]::details-content {
+    height: calc(648.317px - var(--summ-height));
+}
+
+.lang {
+    font-size: 17px;
+    font-weight: bold;
+}
+details .lang {
+    margin: inherit;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.out {
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+
+    transition-property: height;
+    transition-duration: var(--speed);
+    transition-behavior: allow-discrete;
+    transition-timing-function: ease-in-out;
+}
+.out[hide] {
+    height: 0;
+}
+.out[shown] {
+    height: 40px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.inset {
+    display: flex;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 98%;
+    aspect-ratio: 2.082429501084599;
+    zoom: 0.5404871626069784;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#viewbar {
+    overflow: visible;
+}
+
+.wideimg {
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 80%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.wideimg50 {
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#vz-fp {
+    height: var(--vz-fp-height);
+}
+#vz-fp .fp {
+    display: inline-flex;
+    height: var(--vz-fp-height);
+    border-right: 1px solid #000;
+    margin-right: auto;
+}
+#vz-fp .sp {
+    display: inline-flex;
+    align-self: left;
+    height: var(--vz-fp-height);
+    margin-left: 0;
+}
+#vz-out img {
+    display: flex;
+    align-self: center;
+    width: 50%;
+}
+#vz-out img.vz {
+    border-right: 1px solid #000;
+}
+
+#anneal-input {
+    height: var(--anneal-input-height);
+}
+#anneal-input .csv-file {
+    display: inline-flex;
+    height: var(--anneal-input-height);
+    aspect-ratio: 2.006;
+    border-right: 1px solid #000;
+    margin-right: auto;
+}
+#anneal-input .csv-plot {
+    display: inline-flex;
+    height: var(--anneal-input-height);
+    aspect-ratio: 1.665;
+}
+
+
+.egg {
+    display: block;
+    align-self: center;
+    width: fit-content;
+    margin: auto;
+    color: #0000000a;
+}
+.egg div {
+    display: inline-block;
+    text-align: center;
+    width: 15px;
+    padding: 2px;
+    margin-right: 10px;
+    border: 1px dotted #0000000a;
+
+    cursor: pointer;
+    user-select: none;
+}
+.egg#pi {
+    font-size: 26px;
+    color: #0000000a;
+    border: none;
+    cursor: text;
+    user-select: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
+}
