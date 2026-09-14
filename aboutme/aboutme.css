@@ -1,0 +1,56 @@
+.content p {
+    margin-left: 40px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+div#cert {
+    display: block;
+    position: static;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    width: 545px;
+    height: 411.46px;
+    border-top-left-radius: 80px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.clad {
+    display: block;
+    position: relative;
+    align-self: center;
+    z-index: 5;
+    margin: auto;
+    width: 545px;
+    height: auto;
+}
+
+.quack {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 4%;
+    height: 20.5833px;
+    top: -48.5%;
+    left: 44.5%;
+}
+.quack img {
+    position: relative;
+    height: 100%;
+    top: -5px;
+}
+.quack[on] {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 4%;
+    height: 20.5833px;
+    top: -48.5%;
+    left: 44.5%;
+    
+    overflow: visible;
+}
