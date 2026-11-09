@@ -193,6 +193,15 @@ nav.head li a:active {
     color: rgb(103, 27, 146);
 }
 
+#content {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 0;
+    flex-wrap: none;
+    user-select: all;
+}
+
 .nav-panel, .content-starter, .content-footer, .beginning, .end {
     display: none;
     width: 0;
