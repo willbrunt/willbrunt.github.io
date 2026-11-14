@@ -96,23 +96,23 @@
 
 #egg {
     position: absolute;
-    z-index: 200;
+}
 
-    animation: slide 43s linear;
+.eggzal {
+    position: absolute;
+    top: 250px;
+    height: 80px;
+
+    animation: sliding 39.5s linear forwards;
     animation-delay: 5.5s;
 }
-@keyframes slide {
+@keyframes sliding {
     from {
         transform: translateX(0);
     }
     to {
         transform: translateX(3940px);
     }
-}
-.eggzal {
-    animation-play-state: running;
-    position: absolute;
-    height: 80px;
 }
 
 .pre {

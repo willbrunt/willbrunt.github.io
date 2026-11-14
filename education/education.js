@@ -24,7 +24,7 @@ if (document.getElementById("noegg") == null) {
             pl.appendChild(img);
         }
     }
-    preload();
+    // preload();
 
     function egg() { 
         egg_id = "575";
@@ -41,21 +41,21 @@ if (document.getElementById("noegg") == null) {
             img.src = lizal[Math.floor(Math.random() * lizal.length)];
             img.className = "eggzal";
 
-            div.appendChild(img); // load onscreen so gif starts
-
             img.style.top = `${Math.floor(Math.random() * (738 - 80))}px`;
             img.style.left = `${Math.floor(Math.random() * 1920  - 2020)}px`;
+
+            div.appendChild(img); // load onscreen so gif starts
         }
 
         frame = document.getElementById("frame");
-        frame.appendChild(div);
+        frame.append(div);
         frame.setAttribute("run", "");
         div.id = "egg";
         aud.play();
 
         setTimeout(function() {
             aud.pause();
-        }, 43000);
+        }, 42500);
 
         setTimeout(function() {
             div.remove();
